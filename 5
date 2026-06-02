@@ -1,0 +1,42 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+bool esAnagrama(string palabra1, string palabra2)
+{
+    sort(palabra1.begin(), palabra1.end());
+    sort(palabra2.begin(), palabra2.end());
+
+    if(palabra1 == palabra2)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+int main()
+{
+    string palabra1;
+    string palabra2;
+
+    cout << "Ingrese la primera palabra: ";
+    cin >> palabra1;
+
+    cout << "Ingrese la segunda palabra: ";
+    cin >> palabra2;
+
+    if(esAnagrama(palabra1, palabra2))
+    {
+        cout << "Son anagramas.";
+    }
+    else
+    {
+        cout << "No son anagramas.";
+    }
+
+    return 0;
+}
