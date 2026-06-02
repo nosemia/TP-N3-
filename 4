@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool buscarpalabra(string texto, string palabra)
+{
+    if(texto.find(palabra) != string::npos)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void mostrarresultado(bool resultado)
+{
+    if(resultado)
+    {
+        cout << "La palabra fue encontrada.";
+    }
+    else
+    {
+        cout << "La palabra no fue encontrada.";
+    }
+}
+
+int main()
+{
+    string texto;
+    string palabra;
+
+    cout << "Ingrese una frase: ";
+    getline(cin, texto);
+
+    cout << "Ingrese una palabra: ";
+    cin >> palabra;
+
+    bool resultado = buscarpalabra(texto, palabra);
+
+    mostrarresultado(resultado);
+
+    return 0;
+}
