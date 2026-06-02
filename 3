@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+double byteKilobyte(double bytes)
+{
+    return bytes / 1024;
+}
+
+double terabyteMegabyte(double tera)
+{
+    return tera * 1024 * 1024;
+}
+
+double gigabytePetabyte(double giga)
+{
+    return giga / 1048576;
+}
+
+int main()
+{
+    double num;
+
+    cout << "Ingrese cantidad de Bytes: ";
+    cin >> num;
+
+    cout << "Equivale a " << byteKilobyte(num) << " KB" << endl;
+
+    cout << "Ingrese cantidad de Terabytes: ";
+    cin >> num;
+
+    cout << "Equivale a " << terabyteMegabyte(num) << " MB" << endl;
+
+    cout << "Ingrese cantidad de Gigabytes: ";
+    cin >> num;
+
+    cout << "Equivale a " << gigabytePetabyte(num) << " PB" << endl;
+
+    return 0;
+}
